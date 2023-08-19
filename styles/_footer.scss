@@ -1,0 +1,47 @@
+@use "variable";
+
+footer {
+  background-color: variable.$Darkmoderatecyan;
+  @include variable.display;
+  flex-direction: column;
+  padding: 4rem 1rem;
+  gap: 2rem;
+
+  .links,
+  .social-media {
+    ul {
+      @include variable.display;
+      list-style-type: none;
+    }
+  }
+
+  .links {
+    ul {
+      gap: 4rem;
+      li {
+        cursor: pointer;
+        color: variable.$Darkblue;
+        opacity: 0.75;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .social-media {
+    margin-top: 2.5rem;
+    ul {
+      gap: 2rem;
+      li {
+        cursor: pointer;
+        color: variable.$Darkblue;
+        font-size: 1.5rem;
+        opacity: 0.75;
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
+  }
+}

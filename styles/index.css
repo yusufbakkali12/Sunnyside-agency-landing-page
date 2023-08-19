@@ -1,0 +1,775 @@
+@-webkit-keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes fade-out-top {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+}
+@keyframes fade-out-top {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-125%);
+    opacity: 0;
+  }
+}
+header {
+  width: 100%;
+  height: 33rem;
+  background-image: url("../images/mobile/image-header.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 2rem 1.5rem;
+}
+header .header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+header .header-wrapper .mobile-nav-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+header .header-wrapper .mobile-nav-btn button {
+  border: none;
+  background: none;
+  font-family: "Fraunces", serif;
+  cursor: pointer;
+  outline: none;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+header .header-wrapper .mobile-nav-btn #close-menu {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+header .header-wrapper .mobile-nav {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 0;
+  flex-direction: column;
+  gap: 2rem;
+  position: absolute;
+  background-color: white;
+  width: 100%;
+  top: 5rem;
+}
+header .header-wrapper .mobile-nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  list-style-type: none;
+}
+header .header-wrapper .mobile-nav ul li {
+  font-weight: normal;
+  font-size: 1.25rem;
+  cursor: pointer;
+  font-family: "Barlow", sans-serif;
+  color: hsl(232deg, 10%, 55%);
+}
+header .header-wrapper .mobile-nav button {
+  font-family: "Fraunces", serif;
+  cursor: pointer;
+  outline: none;
+  padding: 1.25rem 1.75rem;
+  border-radius: 5rem;
+  border: none;
+  background-color: hsl(51deg, 100%, 49%);
+}
+header .header-wrapper .mobile-nav::after {
+  content: "";
+  -webkit-clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  clip-path: polygon(100% 0, 0 100%, 100% 100%);
+  top: -2rem;
+  right: 0;
+  background-color: #fff;
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+}
+header .header-wrapper .desktop-nav {
+  display: none;
+}
+header .header-intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  height: 100%;
+}
+header .header-intro h1 {
+  font-size: 2.25rem;
+  text-align: center;
+  letter-spacing: 0.5rem;
+  color: white;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+}
+
+@media screen and (min-width: 768px) {
+  header {
+    height: 32rem;
+    background-image: url("../images/desktop/image-header.jpg");
+    background-size: cover;
+    background-position: center;
+    padding: 2rem 3rem;
+  }
+  header .header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+  }
+  header .header-wrapper .mobile-nav-btn {
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  header .header-wrapper .desktop-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  header .header-wrapper .desktop-nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style-type: none;
+    gap: 1.5rem;
+  }
+  header .header-wrapper .desktop-nav ul li {
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    font-family: "Barlow", sans-serif;
+    color: #fff;
+  }
+  header .header-wrapper .desktop-nav button {
+    font-family: "Fraunces", serif;
+    cursor: pointer;
+    outline: none;
+    padding: 0.75rem 0.9rem;
+    border-radius: 5rem;
+    border: none;
+    background-color: #fff;
+    font-size: 0.7rem;
+  }
+  header .header-wrapper .desktop-nav button:hover {
+    background-color: rgb(100, 200, 250);
+    color: white;
+  }
+  header .header-intro {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 4rem;
+    gap: 3.5rem;
+  }
+  header .header-intro img {
+    width: 1.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  header {
+    background-image: url("../images/desktop/image-header.jpg");
+    background-size: 100%;
+    background-position: center;
+  }
+  header .header-wrapper .desktop-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  header .header-wrapper .desktop-nav ul {
+    gap: 2.5rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  header {
+    height: 40rem;
+    background-image: url("../images/desktop/image-header.jpg");
+    background-size: 70rem 40rem;
+    background-position: center;
+    background-color: rgb(61, 190, 255);
+  }
+  header .header-wrapper .desktop-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2.5rem;
+  }
+  header .header-wrapper .desktop-nav ul {
+    gap: 2.5rem;
+  }
+  header .header-intro {
+    gap: 6rem;
+  }
+  header .header-intro h1 {
+    letter-spacing: 0.75rem;
+    font-size: 3rem;
+  }
+}
+main {
+  width: 100%;
+  height: 100%;
+}
+main .first-section .image-bg-1,
+main .first-section .image-bg-2 {
+  width: 100%;
+  height: 20rem;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+main .first-section .image-bg-1 {
+  background-image: url(../images/mobile/image-transform.jpg);
+}
+main .first-section .image-bg-2 {
+  background-image: url(../images/mobile/image-stand-out.jpg);
+}
+main .first-section .info-1,
+main .first-section .info-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem 1.75rem;
+  text-align: center;
+  gap: 2rem;
+}
+main .first-section .info-1 h2,
+main .first-section .info-2 h2 {
+  font-size: 2rem;
+  letter-spacing: 1px;
+  color: hsl(212deg, 27%, 19%);
+  font-weight: 900;
+}
+main .first-section .info-1 p,
+main .first-section .info-2 p {
+  letter-spacing: 0.5px;
+  line-height: 2rem;
+  color: hsl(232deg, 10%, 55%);
+}
+main .first-section .info-1 span,
+main .first-section .info-2 span {
+  color: hsl(212deg, 27%, 19%);
+  position: relative;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Fraunces", serif;
+  font-weight: 900;
+  z-index: 1;
+  cursor: pointer;
+}
+main .first-section .info-1 .learn-1::after,
+main .first-section .info-1 .learn-2::after,
+main .first-section .info-2 .learn-1::after,
+main .first-section .info-2 .learn-2::after {
+  content: "";
+  position: absolute;
+  padding: 0 1rem;
+  width: 7rem;
+  height: 0.5rem;
+  bottom: 0;
+  border-radius: 0.5rem;
+  z-index: -1;
+  opacity: 0.5;
+}
+main .first-section .info-1 .learn-1:after,
+main .first-section .info-2 .learn-1:after {
+  background-color: hsl(51deg, 100%, 49%);
+}
+main .first-section .info-1 .learn-2:after,
+main .first-section .info-2 .learn-2:after {
+  background-color: hsl(7deg, 99%, 70%);
+}
+main .first-section .info-3 {
+  background-image: url("../images/mobile/image-graphic-design.jpg");
+}
+main .first-section .info-4 {
+  background-image: url("../images/mobile/image-photography.jpg");
+}
+main .first-section .info-3,
+main .first-section .info-4 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  gap: 2rem;
+  width: 100%;
+  height: 35rem;
+  background-repeat: no-repeat;
+  background-size: 100% 35rem;
+}
+main .first-section .info-3 h2,
+main .first-section .info-4 h2 {
+  font-size: 1.75rem;
+  letter-spacing: 1px;
+  color: hsl(167deg, 40%, 24%);
+  font-weight: 900;
+}
+main .first-section .info-3 p,
+main .first-section .info-4 p {
+  font-size: 0.95rem;
+  line-height: 1.5rem;
+  color: hsl(198deg, 62%, 26%);
+}
+main .testimonial-section {
+  padding: 5rem 2rem;
+  text-align: center;
+}
+main .testimonial-section h2 {
+  letter-spacing: 3px;
+  color: hsl(210deg, 4%, 67%);
+  font-size: 1.2rem;
+}
+main .testimonial-section .testimony-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4rem;
+  margin-top: 4rem;
+}
+main .testimonial-section .testimony-wrapper .testimony {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+main .testimonial-section .testimony-wrapper .testimony img {
+  width: 4.5rem;
+  -webkit-clip-path: circle(50%);
+          clip-path: circle(50%);
+}
+main .testimonial-section .testimony-wrapper .testimony p {
+  color: hsl(213deg, 9%, 39%);
+  line-height: 1.75rem;
+  font-size: 1.1rem;
+}
+main .testimonial-section .testimony-wrapper .testimony .client {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+main .testimonial-section .testimony-wrapper .testimony .client h3 {
+  color: hsl(212deg, 27%, 19%);
+}
+main .testimonial-section .testimony-wrapper .testimony .client span {
+  color: hsl(210deg, 4%, 67%);
+}
+main .image-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+main .image-section div {
+  width: 100%;
+  height: 12rem;
+  background-repeat: no-repeat;
+  background-size: 100% 12rem;
+}
+main .image-section .img1 {
+  background-image: url(../images/mobile/image-gallery-milkbottles.jpg);
+}
+main .image-section .img2 {
+  background-image: url(../images/mobile/image-gallery-orange.jpg);
+}
+main .image-section .img3 {
+  background-image: url(../images/mobile/image-gallery-cone.jpg);
+}
+main .image-section .img4 {
+  background-image: url(../images/mobile/image-gallery-sugar-cubes.jpg);
+}
+
+@media screen and (min-width: 768px) {
+  main {
+    width: 100%;
+    height: 100%;
+  }
+  main .first-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  main .first-section .image-bg-1 {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  main .first-section .image-bg-1,
+main .first-section .image-bg-2 {
+    height: 20rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  main .first-section .image-bg-1 {
+    background-image: url(../images/desktop/image-transform.jpg);
+  }
+  main .first-section .image-bg-2 {
+    background-image: url(../images/desktop/image-stand-out.jpg);
+  }
+  main .first-section .info-1,
+main .first-section .info-2 {
+    height: 20rem;
+    padding: 3rem;
+    text-align: left;
+    gap: 2rem;
+  }
+  main .first-section .info-1 h2,
+main .first-section .info-2 h2 {
+    font-size: 1.5rem;
+  }
+  main .first-section .info-1 p,
+main .first-section .info-2 p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+  main .first-section .info-1 span,
+main .first-section .info-2 span {
+    width: 100%;
+    padding: 0;
+    justify-content: flex-start;
+    font-family: "Fraunces", serif;
+    font-weight: 900;
+    z-index: 1;
+  }
+  main .first-section .info-1 .learn-1:after,
+main .first-section .info-1 .learn-2:after,
+main .first-section .info-2 .learn-1:after,
+main .first-section .info-2 .learn-2:after {
+    padding: 0;
+  }
+  main .first-section .info-3 {
+    background-image: url("../images/desktop/image-graphic-design.jpg");
+  }
+  main .first-section .info-4 {
+    background-image: url("../images/desktop/image-photography.jpg");
+  }
+  main .first-section .info-3,
+main .first-section .info-4 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+    padding: 2rem;
+    text-align: center;
+    gap: 1rem;
+    width: 100%;
+    height: 22rem;
+    background-repeat: no-repeat;
+    background-size: 100% 22rem;
+  }
+  main .first-section .info-3 h2,
+main .first-section .info-4 h2 {
+    font-size: 1.5rem;
+  }
+  main .first-section .info-3 p,
+main .first-section .info-4 p {
+    font-size: 0.95rem;
+  }
+  main .testimonial-section {
+    padding: 5rem 2rem;
+    text-align: center;
+  }
+  main .testimonial-section h2 {
+    letter-spacing: 3px;
+    color: hsl(210deg, 4%, 67%);
+    font-size: 1.2rem;
+  }
+  main .testimonial-section .testimony-wrapper {
+    gap: 4rem;
+    margin-top: 4rem;
+  }
+  main .testimonial-section .testimony-wrapper .testimony {
+    padding: 0 5rem;
+  }
+  main .image-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  main .image-section div {
+    width: 100%;
+    height: 20rem;
+    background-repeat: no-repeat;
+    background-size: 100% 20rem;
+  }
+  main .image-section .img1 {
+    background-image: url(../images/desktop/image-gallery-milkbottles.jpg);
+  }
+  main .image-section .img2 {
+    background-image: url(../images/desktop/image-gallery-orange.jpg);
+  }
+  main .image-section .img3 {
+    background-image: url(../images/desktop/image-gallery-cone.jpg);
+  }
+  main .image-section .img4 {
+    background-image: url(../images/desktop/image-gallery-sugarcubes.jpg);
+  }
+}
+@media screen and (min-width: 1024px) {
+  main .first-section .image-bg-1 {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  main .first-section .image-bg-1,
+main .first-section .image-bg-2 {
+    height: 25rem;
+    background-size: 100% 25rem;
+  }
+  main .first-section .info-1,
+main .first-section .info-2 {
+    height: 25rem;
+    padding: 3rem 4rem;
+  }
+  main .first-section .info-1 h2,
+main .first-section .info-2 h2 {
+    width: 100%;
+    font-size: 1.7rem;
+  }
+  main .first-section .info-1 p,
+main .first-section .info-2 p {
+    font-size: 0.9rem;
+    line-height: 1.6rem;
+  }
+  main .first-section .info-1 span,
+main .first-section .info-2 span {
+    width: 100%;
+    padding: 0;
+    justify-content: flex-start;
+    font-family: "Fraunces", serif;
+    font-weight: 900;
+    font-size: 1.2rem;
+    z-index: 1;
+  }
+  main .first-section .info-1 .learn-1:after,
+main .first-section .info-1 .learn-2:after,
+main .first-section .info-2 .learn-1:after,
+main .first-section .info-2 .learn-2:after {
+    width: 8.5rem;
+    padding: 0;
+  }
+  main .first-section .info-3,
+main .first-section .info-4 {
+    padding: 3.5rem 5rem;
+    gap: 1.5rem;
+    width: 100%;
+    height: 28rem;
+    background-size: 100% 28rem;
+  }
+  main .first-section .info-3 h2,
+main .first-section .info-4 h2 {
+    font-size: 1.6rem;
+  }
+  main .first-section .info-3 p,
+main .first-section .info-4 p {
+    font-size: 1rem;
+  }
+  main .testimonial-section {
+    margin: 5rem 0;
+    padding: 5rem 4rem;
+  }
+  main .testimonial-section h2 {
+    font-size: 1.5rem;
+  }
+  main .testimonial-section .testimony-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 3rem;
+    margin-top: 4rem;
+  }
+  main .testimonial-section .testimony-wrapper .testimony {
+    padding: 0;
+  }
+  main .image-section {
+    display: flex;
+  }
+  main .image-section div {
+    width: 100%;
+    height: 20rem;
+    background-repeat: no-repeat;
+    background-size: 100% 20rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  main .first-section .image-bg-1 {
+    grid-row: 1;
+    grid-column: 2;
+  }
+  main .first-section .image-bg-1,
+main .first-section .image-bg-2 {
+    height: 100%;
+    background-size: 100% 100%;
+  }
+  main .first-section .info-1 {
+    padding: 9rem 4rem 9rem 8rem;
+  }
+  main .first-section .info-2 {
+    padding: 9rem 8rem 9rem 5rem;
+  }
+  main .first-section .info-1,
+main .first-section .info-2 {
+    height: 100%;
+  }
+  main .first-section .info-1 h2,
+main .first-section .info-2 h2 {
+    width: 100%;
+    font-size: 2.85rem;
+    line-height: 4rem;
+  }
+  main .first-section .info-1 p,
+main .first-section .info-2 p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+  }
+  main .first-section .info-1 span,
+main .first-section .info-2 span {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+  }
+  main .first-section .info-1 .learn-1:after,
+main .first-section .info-1 .learn-2:after,
+main .first-section .info-2 .learn-1:after,
+main .first-section .info-2 .learn-2:after {
+    width: 11rem;
+  }
+  main .first-section .info-3,
+main .first-section .info-4 {
+    padding: 0 8rem 4rem;
+    gap: 2.5rem;
+    height: 100%;
+    background-size: 100% 100%;
+  }
+  main .first-section .info-3 h2,
+main .first-section .info-4 h2 {
+    margin-top: 25rem;
+    font-size: 1.5rem;
+  }
+  main .first-section .info-3 p,
+main .first-section .info-4 p {
+    font-size: 1.25rem;
+  }
+  main .testimonial-section {
+    margin: 7rem 0;
+    padding: 5rem 9rem;
+  }
+  main .testimonial-section h2 {
+    opacity: 0.57;
+    font-size: 1.5rem;
+  }
+  main .testimonial-section .testimony-wrapper {
+    gap: 3.5rem;
+    margin-top: 4rem;
+  }
+  main .testimonial-section .testimony-wrapper .testimony {
+    gap: 4rem;
+  }
+  main .image-section {
+    display: flex;
+  }
+  main .image-section div {
+    width: 100%;
+    height: 30rem;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+}
+footer {
+  background-color: hsl(168deg, 84%, 80%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 4rem 1rem;
+  gap: 2rem;
+}
+footer .links ul,
+footer .social-media ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+}
+footer .links ul {
+  gap: 4rem;
+}
+footer .links ul li {
+  color: hsl(198deg, 62%, 26%);
+  opacity: 0.75;
+}
+footer .links ul li:hover {
+  color: #fff;
+}
+footer .social-media {
+  margin-top: 2.5rem;
+}
+footer .social-media ul {
+  gap: 2rem;
+}
+footer .social-media ul li {
+  color: hsl(198deg, 62%, 26%);
+  font-size: 1.5rem;
+  opacity: 0.75;
+}
+footer .social-media ul li:hover {
+  color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Barlow", sans-serif;
+}
+body h1,
+body h2,
+body h3 {
+  font-weight: 900;
+  font-family: "Fraunces", serif;
+}/*# sourceMappingURL=index.css.map */
